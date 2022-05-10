@@ -1,0 +1,14 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "OhmyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "Sabrina Ambre Biller",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

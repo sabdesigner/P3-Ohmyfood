@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabdesigner/P3-Ohmyfood.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabdesigner/P3-Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/sabdesigner/P3-Ohmyfood#readme"
 }

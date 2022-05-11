@@ -1,7 +1,9 @@
 //utils
 @import "./utils/variables";
 //base
-@import "./utils/font";
+@import "./base/base";
+@import "./base/font";
 //layout
-@import "./layout/header";
-@import "./layout/footer;sass --version
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/bloc";

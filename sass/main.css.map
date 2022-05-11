@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "utils/_variables.scss",
+        "base/_base.scss",
+        "base/_font.scss",
+        "layouts/_header.scss",
+        "layouts/_footer.scss",
+        "layouts/_bloc.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

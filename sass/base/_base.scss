@@ -2,11 +2,12 @@ body{
     background-color: white;
     font-family: 'Roboto';
 }
-h1, h2, h3, {
-    margin-right: 20px;
-    margin-left: 20px;
+h2, h3, {
     font-family: 'Roboto';
     font-weight: 700;
+    h1{
+        padding: 20%;
+    }
     h4{
         font-family: 'Shrikhand';
     }
@@ -14,7 +15,13 @@ h1, h2, h3, {
 
 a{
     text-decoration: none;
+    color: $color-white;
     &:visited{
-        color: black;
+        color: $color-white;
     }
+}
+i {
+    font-family: 'FontAwesome';
+    padding-left: 10px;
+    padding-right: 10px;
 }

@@ -1,9 +1,11 @@
 //utils
 @import "./utils/variables";
+//ressources ext
+@import "./ressources/normalize";
 //base
 @import "./base/base";
 @import "./base/font";
 //layout
 @import "./layouts/header";
-@import "./layouts/footer";
 @import "./layouts/bloc";
+@import "./layouts/footer";

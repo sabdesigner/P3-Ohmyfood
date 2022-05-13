@@ -351,7 +351,7 @@ body {
 h2, h3 {
   font-family: 'Roboto';
   font-weight: 700;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 h2 h1, h3 h1 {
@@ -488,12 +488,15 @@ header p {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: calc(100%-40px);
   background-color: #F2F2F2;
-  margin: 20px;
   border-radius: 20px;
   -webkit-box-shadow: 1px 4px 8px #a09d9d;
           box-shadow: 1px 4px 8px #a09d9d;
+  margin: 20px 20px 20px 40px;
 }
 
 .blocfonctionnement h3 {
@@ -503,9 +506,9 @@ header p {
   border-radius: 100%;
   background-color: #9356DC;
   color: white;
-  padding: 3%;
-  -webkit-margin-start: -20px;
-          margin-inline-start: -20px;
+  position: absolute;
+  padding: 10px;
+  left: -5px;
 }
 
 .blocfonctionnement--box {
@@ -516,6 +519,7 @@ header p {
   border-radius: 30px;
   background-color: #F2F2F2;
   color: #353535;
+  margin-left: 20px;
 }
 
 footer {

@@ -71,11 +71,12 @@
             flex-direction:row;
             align-items:center;
             text-align: center;
+            justify-content:space-evenly;
             width: calc(100%-40px);  
             background-color: $color-softgrey;
-            margin:20px;
             border-radius: 20px;
-            box-shadow: 1px 4px 8px $color-mediumgrey;         
+            box-shadow: 1px 4px 8px $color-mediumgrey;  
+            margin: 20px 20px 20px 40px;
                 h3 {
                 width: 14px;
                 height: 14px;
@@ -83,9 +84,10 @@
                 border-radius: 100% ;
                 background-color: $colour-primaire;
                 color: white;
-                padding: 3%;
-                margin-inline-start: -20px;
-          }
+                position: absolute;
+                padding: 10px;
+                left: -5px;
+              }
                 &--box{
                     width:100%;
                     min-width: 280px;

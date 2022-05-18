@@ -1,162 +1,158 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Accueil Ohmyfood</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sass/main.css" />
-    <link rel="stylesheet" href="sass/main.css.map" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="bloc bloc--header">
-          <p>ohmyfood</p>
+<head>
+  <title>Accueil Ohmyfood</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="sass/main.css" />
+  <link rel="stylesheet" href="sass/main.css.map" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <div class="box box__header">
+        <p>ohmyfood</p>
       </div>
-      </nav>
-    </header>
-    <!--haut de page -->
-    <main>
-      <div>
-        <div class="bloc bloc--localisation">
-          <i class="fa-solid fa-location-dot $color-stronggrey"></i>
-          <form method="post">
-            <input type="text" placeholder="Paris, Belleville" />
-          </form>
-        </div>
-        <div  class="bloc bloc--reservation">
-          <h1>Réservez le menu qui vous convient</h1>
-          <p>
-            Découvrez les restaurants d'exception, séléctionnés par nos soins.
-          </p>
-          <div class="bloc bloc--reservation--btn">Explorer nos restaurants</div>
-        </div>
+    </nav>
+  </header>
+  <!--haut de page -->
+  <main>
+    <div>
+      <div class="box box__location">
+        <i class="fa-solid fa-location-dot $color-stronggrey box__location__icon"></i>
+        <form method="post">
+          <input type="text" placeholder="Paris, Belleville" />
+        </form>
       </div>
-    </main>
-    <!--fonctionnement -->
-    <aside>
-      <h2>Fonctionnement</h2>
-      <div>
-        <div class="blocfonctionnement blocfonctionnement-box">
-          <h3>1</h3>
-          <i class="fa-solid fa-mobile-screen-button"></i>
-          <p>Choisissez un restaurant</p>
-        </div>
-        <div class="blocfonctionnement blocfonctionnement-box">
-          <h3>2</h3>
-          <i class="fa-solid fa-list"></i>
-          <p>Composez votre menu</p>
-        </div>
-        <div class="blocfonctionnement blocfonctionnement-box">
-          <h3>3</h3>
-          <i class="fa-solid fa-store"></i>
-          <p>Dégustez au restaurant</p>
-        </div>
+      <div class=" box box__booking box__booking__text">
+        <h1 class="titre">Réservez le menu qui vous convient</h1>
+        <p>
+          Découvrez les restaurants d'exception, séléctionnés par nos soins.
+        </p>
+        <div class="box__booking__btn">Explorer nos restaurants</div>
       </div>
-    </aside>
-    <!-- les cartes -->
-    <section class="blocrestaurants">
-      <h2>Les restaurants</h2>
-      <!-- cartes 1 -->
-      <article>
-        <div class="blocrestaurants  blocrestaurants--box">
-          <div>
-            <img
-              src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-              alt="La palette du goût"
-            />
-            <span class="blocrestaurants  blocrestaurants--box blocrestaurants--box--nouveau"> Nouveau </span>
-          </div>
-          <div class="blocrestaurants  blocrestaurants--box blocrestaurants--box--description">
-            <h3>La palette du goût</h3>
+    </div>
+  </main>
+  <!--fonctionnement -->
+  <aside class="functions">
+    <h2 class="titre">Fonctionnement</h2>
+    <div class="functions__blocs">
+      <div class="functions__blocs__bloc">
+        <span class="functions__blocs__bloc__number">1</span>
+        <i class="fa-solid fa-mobile-screen-button icone-function"></i>
+        <p class="functions__blocs__bloc__text">Choisissez un restaurant</p>
+      </div>
+    </div>
+    <div class="functions__blocs">
+      <div class="functions__blocs__bloc">
+        <span class="functions__blocs__bloc__number">2</span>
+        <i class="fa-solid fa-list icone-function"></i>
+        <p class="functions__blocs__bloc__text">Composez votre menu</p>
+      </div>
+    </div>
+    <div class="functions__blocs">
+      <div class="functions__blocs__bloc">
+        <span class="functions__blocs__bloc__number">3</span>
+        <i class="fa-solid fa-store icone-function"></i>
+        <p class="functions__blocs__bloc__text">Dégustez au restaurant</p>
+      </div>
+    </div>
+  </aside>
+  <!-- les cartes -->
+  <section class="restaurants">
+    <h2 class="titre">Les restaurants</h2>
+    <!-- cartes 1 -->
+    <article class="restaurants__blocs">
+      <a href="menu-lapalettedugout.html">
+        <div class="restaurants__blocs__bloc">
+          <img class="restaurants__blocs__bloc__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+          <span class="restaurants__blocs__bloc__new">Nouveau </span>
+
+          <div class="restaurants__blocs__bloc__texte">
+            <h3 class="titre">La palette du goût</h3>
             <p>Ménilmontant</p>
           </div>
           <div>
-            <i class="fa-thin fa-heart"></i>
-          </div>
+            <i class="fa-thin fa-heart icone-restaurant"></i>
         </div>
-      </article>
-      <!-- cartes 2 -->
-      <article>
-        <div class="blocrestaurants  blocrestaurants--box">
-          <div>
-            <img
-              src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-              alt="La note enchantée"
-            />
-            <span class="blocrestaurants  blocrestaurants--box blocrestaurants--box--nouveau">Nouveau </span>
-          </div>
-          <div class="blocrestaurants  blocrestaurants--box blocrestaurants--box--description">
-            <h3>La note enchantée</h3>
+        </div>
+      </a>
+    </article>
+    <!-- cartes 2 -->
+    <article class="restaurants__blocs">
+      <a href="menu-lanoteenchantée.html">
+        <div class="restaurants__blocs__bloc">
+          <img class="restaurants__blocs__bloc__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
+          <span class="restaurants__blocs__bloc__new">Nouveau </span>
+
+          <div class="restaurants__blocs__bloc__texte">
+            <h3 class="titre">La note enchantée</h3>
             <p>Charonne</p>
           </div>
           <div>
-            <i class="fa-thin fa-heart"></i>
-          </div>
+            <i class="fa-thin fa-heart icone-restaurant"></i>
         </div>
-      </article>
-      <!-- cartes 3 -->
-      <article>
-        <div class="blocrestaurants  blocrestaurants--box">
-        <div>
-            <img
-              src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-              alt="A la française"
-            />
-          </div>
-          <div class="blocrestaurants  blocrestaurants--box blocrestaurants--box--description">
-            <h3>A la française</h3>
+        </div>
+      </a>
+    </article>
+    <!-- cartes 3 -->
+    <article class="restaurants__blocs">
+      <a href="menu-alafrançaise.html">
+        <div class="restaurants__blocs__bloc">
+          <img class="restaurants__blocs__bloc__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" />
+
+          <div class="restaurants__blocs__bloc__texte">
+            <h3 class="titre">À la française</h3>
             <p>Cité Rouge</p>
           </div>
           <div>
-            <i class="fa-thin fa-heart"></i>
-          </div>
+            <i class="fa-thin fa-heart icone-restaurant"></i>
         </div>
-      </article>
-      <!-- cartes 4 -->
-      <article>
-        <div class="blocrestaurants  blocrestaurants--box">
-        <div>
-            <img
-              src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-              alt="Le délice des sens"
-            />
-          </div>
-          <div class="blocrestaurants  blocrestaurants--box blocrestaurants--box--description">
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
+        </div>
+      </a>
+    </article>
+    <!-- cartes 4 -->
+    <article class="restaurants__blocs">
+      <a href="menu-ledelicedessens.html">
+        <div class="restaurants__blocs__bloc">
+          <img class="restaurants__blocs__bloc__img"
+            src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La palette du goût" />
+
+          <div class="restaurants__blocs__bloc__texte">
+            <h3 class="titre">Le délice des sens</h3>
+            <p>Folie-Mericourt</p>
           </div>
           <div>
-            <i class="fa-thin fa-heart"></i>
-          </div>
+            <i class="fa-thin fa-heart icone-restaurant"></i>
         </div>
-      </article>
-    </section>
-    <!-- pied de page -->
-    <footer>
-      <div>
-        <h4>ohmyfood</h4>
-        <p>
-          <i class="fa-solid fa-utensils"></i>
-          Proposer un restaurant
-        </p>
-        <p>
-          <i class="fa-solid fa-handshake-angle"></i>
-          Devenir partenaire
-        </p>
-        <p>Mentions légales</p>
-        <p>
-          <a href="mailto:contact@ohmyfood.com"> Contact </a>
-        </p>
-      </div>
-    </footer>
-    <script 
-    src="https://kit.fontawesome.com/a51f2b9e48.js" 
-    crossorigin="anonymous"
-    ></script>
-  </body>
+        </div>
+      </a>
+    </article>
+  </section>
+  <!-- pied de page  -->
+  <footer class="footer">
+    <div>
+      <h4 class="titre">ohmyfood</h4>
+      <p>
+        <i class="fa-solid fa-utensils"></i>
+        Proposer un restaurant
+      </p>
+      <p>
+        <i class="fa-solid fa-handshake-angle"></i>
+        Devenir partenaire
+      </p>
+      <p>Mentions légales</p>
+      <p >
+        <a href="mailto:contact@ohmyfood.com"> Contact </a>
+      </p>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/a51f2b9e48.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

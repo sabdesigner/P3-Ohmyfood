@@ -1,131 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Menu - La note enchantée</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sass/main.css" />
-    <link rel="stylesheet" href="sass/main.css.map" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
-  </head>
 
+<head>
+  <title>Menu - La note enchantée</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="sass/main.css" />
+  <link rel="stylesheet" href="sass/main.css.map" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+    rel="stylesheet">
+</head>
 <body>
-    <header>
-        <nav>
-          <div class="bloc bloc--header">
-            <p>ohmyfood</p>
-        </div>
-        </nav>
-      </header>
+  <header class="header">
+    <nav class="box " >
+        <a href="./index.html">
+            <i class="fa-solid fa-arrow-left box__nav"></i>
+        </a>
+      <div class="box__header">
+        <p>ohmyfood</p>
+      </div>
+    </nav>
+  </header>
     <!--haut de page -->
     <main>
-        <div class="bloc bloc--reservation">
-            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
+        <div class="box-menu__bloc">
+            <img class="box-menu__bloc__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
         </div>
     </main>
     <!--menu-->
-    <section class="bloccarte">
-        <div class="titre">
+    <section class="menu">
+        <div class="menu__blocs titre-menu">
             <h1>La note enchantée</h1>
-                <i class="fa-thin fa-heart"></i>
+                <i class="fa-regular fa-heart icone-menu"></i>
         </div>
         <!--entrees -->
-        <article >
-            <div>
-            </div>
+        <article>
+            <div class="menu__blocs__plat titre-menu">
                 <h2>ENTRÉES</h2>
             </div>
-            <div class="bloccarte menu">
-                <h3>Ravioles de foie gras</h3>
+            <div class="menu__blocs__bloc">
+                <div  class="menu__blocs__bloc__texte">
+                    <h3  class="titre-menu">Ravioles de foie gras</h3>
                 <p>Accompagnés de leur crème à la truffe</p>
-                <p>25€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Caviar osciètre</h3>
+                    <div class="prix"> 
+                        <p>25€</p>
+                    </div>
+
+            </div>
+
+            <div class="menu__blocs__bloc">
+                <div  class="menu__blocs__bloc__texte">
+                    <h3  class="titre-menu">Caviar osciètre</h3>
                 <p>Sur blini à la farine de blé noir</p>
-                <p>35€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Homard et espuma de potiron</h3>
+            <div class="prix"> 
+                <p>35€</p>           
+            </div>
+        </div>
+
+        <div class="menu__blocs__bloc">
+            <div  class="menu__blocs__bloc__texte">
+                <h3  class="titre-menu">Homard et espuma de potiron</h3>
                 <p>Mariné aux zestes d'orange</p>
+            </div>
+            <div class="prix"> 
                 <p>20€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Foie gras de canard cuit entier</h3>
+        </div>
+            
+        <div class="menu__blocs__bloc">
+            <div  class="menu__blocs__bloc__texte">
+                <h3  class="titre-menu">Foie gras de canard cuit entier</h3>
                 <p>Confiture de figue et pain toasté</p>
+            </div>
+            <div class="prix"> 
                 <p>35€</p>
+            </div>
+        </div>
             </div>
         </article>
         <!--plats -->
         <article>
-            <div>
+            <div class="menu__blocs__plat">
                 <h2>PLATS</h2>
             </div>
-            <div class="bloccarte menu">
-                <h3>Noix de coquilles Saint-Jacques</h3>
+            <div class="menu__blocs__bloc">
+                <div  class="menu__blocs__bloc__texte">
+                    <h3  class="titre-menu">Noix de coquilles Saint-Jacques</h3>
                 <p>Sur lit de purée de céleri-rave</p>
+            </div>
+            <div class="prix"> 
                 <p>40€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Langoustine poêlée</h3>
+        </div>
+            <div class="menu__blocs__bloc">
+                <div  class="menu__blocs__bloc__texte">
+                    <h3  class="titre-menu">Langoustine poêlée</h3>
                 <p>Purée de patate douce</p>
+            </div>
+            <div class="prix"> 
                 <p>35€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Mijoté de queue de boeuf</h3>
+        </div>
+        <div class="menu__blocs__bloc">
+            <div  class="menu__blocs__bloc__texte">
+                <h3  class="titre-menu">Mijoté de queue de boeuf</h3>
                 <p>Et riz sauvage aux zestes de citron</p>
+            </div>
+            <div class="prix"> 
                 <p>44€</p>
             </div>
+        </div>
         </article>
         <!--desserts -->
         <article>
-            <div>
+            <div class="menu__blocs__plat">
                 <h2>DESSERTS</h2>
             </div>
-            <div class="bloccarte menu">
-                <h3>Macaron noisette et chocolat</h3>
+            <div class="menu__blocs__bloc">
+                <div  class="menu__blocs__bloc__texte">
+                    <h3  class="titre-menu">Macaron noisette et chocolat</h3>
                 <p>Glace au caramel brun et sel de Guérande</p>
+            </div>
+            <div class="prix"> 
                 <p>18€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Baba au rhum revisité</h3>
+        </div>
+        <div class="menu__blocs__bloc">
+            <div  class="menu__blocs__bloc__texte">
+                <h3  class="titre-menu">Baba au rhum revisité</h3>
                 <p>Avec son coulis de citron</p>
+            </div>
+            <div class="prix"> 
                 <p>22€</p>
             </div>
-            <div class="bloccarte menu">
-                <h3>Tarte au citron meringuée</h3>
+        </div>
+        <div class="menu__blocs__bloc">
+            <div  class="menu__blocs__bloc__texte">
+                <h3  class="titre-menu">Tarte au citron meringuée</h3>
                 <p>Déstructurée</p>
+        </div>
+            <div class="prix"> 
                 <p>23€</p>
             </div>
-        </article>
-        <div class="bloc bloc--reservation--btn">
-            <a href="#"> Commander </a>
         </div>
+        </article>
+        <a href="#">  
+            <div class="menu__blocs__btn">
+        Commander 
+        </div></a>
     </section>
     
     <!-- pied de page -->
-    <footer>
-        <div>
-          <h4>ohmyfood</h4>
-          <p>
-            <i class="fa-solid fa-utensils"></i>
-            Proposer un restaurant
-          </p>
-          <p>
-            <i class="fa-solid fa-handshake-angle"></i>
-            Devenir partenaire
-          </p>
-          <p>Mentions légales</p>
-          <p>
-            <a href="mailto:contact@ohmyfood.com"> Contact </a>
-          </p>
-        </div>
-      </footer>
-      <script 
-      src="https://kit.fontawesome.com/a51f2b9e48.js" 
-      crossorigin="anonymous"
-      ></script>
-    </body>
-  </html>
+  <footer class="footer">
+    <div>
+      <h4 class="titre">ohmyfood</h4>
+      <p>
+        <i class="fa-solid fa-utensils"></i>
+        Proposer un restaurant
+      </p>
+      <p>
+        <i class="fa-solid fa-handshake-angle"></i>
+        Devenir partenaire
+      </p>
+      <p>Mentions légales</p>
+      <p >
+        <a href="mailto:contact@ohmyfood.com"> Contact </a>
+      </p>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/a51f2b9e48.js" crossorigin="anonymous"></script>
+</body>
+</html>

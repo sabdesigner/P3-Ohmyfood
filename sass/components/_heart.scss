@@ -1,0 +1,32 @@
+.heart {
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color : $color-mediumgrey;
+  cursor: pointer;
+
+  &_vide{
+    position: absolute;
+    opacity: 1;
+    -webkit-text-stroke-width: 3px;
+    transition: transparent 20ms  ease;
+  }
+  &_plein{
+    transform: scale(0);
+    background-image:linear-gradient(
+      to bottom, 
+    $colour-secondary, 
+    $colour-secondary 10%, 
+    $colour-primaire 90%);
+    -webkit-text-stroke-width: 0px;
+    transition: transform 800ms ease;
+  }
+  &:hover{
+    .heart_vide{
+      opacity: 0;
+    }
+    .heart_plein{
+      transform: scale(1);
+    }
+  }
+}

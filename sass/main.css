@@ -395,6 +395,7 @@ i {
 
 .heart {
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #a09d9d;
@@ -405,8 +406,8 @@ i {
   position: absolute;
   opacity: 1;
   -webkit-text-stroke-width: 3px;
-  -webkit-transition: transparent 20ms  ease;
-  transition: transparent 20ms  ease;
+  -webkit-transition: transparent 20ms ease;
+  transition: transparent 20ms ease;
 }
 
 .heart_plein {
@@ -492,7 +493,7 @@ i {
 }
 
 .box__booking {
-  width: 100%;
+  width: calc(100% - 40px);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -503,6 +504,8 @@ i {
           align-items: center;
   background-color: #F2F2F2;
   color: #353535;
+  padding-left: 20px;
+  padding-right: 20px;
   -webkit-padding-after: 20%;
           padding-block-end: 20%;
 }
@@ -765,7 +768,8 @@ i {
   padding: 10px 10px 0px 10px;
 }
 
-.menu__blocs__bloc .prix {
+.menu__blocs__bloc__prix {
+  position: relative;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -776,7 +780,7 @@ i {
   color: #353535;
 }
 
-.menu__blocs__plat {
+.menu__plat {
   color: #353535;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
@@ -784,7 +788,7 @@ i {
   margin-bottom: 20px;
 }
 
-.menu__blocs__btn {
+.menu__btn {
   width: 250px;
   height: 40px;
   font-size: 18px;

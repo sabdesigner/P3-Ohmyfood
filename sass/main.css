@@ -393,6 +393,43 @@ i {
   font-weight: 700;
 }
 
+.heart {
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #a09d9d;
+  cursor: pointer;
+}
+
+.heart_vide {
+  position: absolute;
+  opacity: 1;
+  -webkit-text-stroke-width: 3px;
+  -webkit-transition: transparent 20ms  ease;
+  transition: transparent 20ms  ease;
+}
+
+.heart_plein {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(10%, #FF79DA), color-stop(90%, #9356DC));
+  background-image: linear-gradient(to bottom, #FF79DA, #FF79DA 10%, #9356DC 90%);
+  -webkit-text-stroke-width: 0px;
+  -webkit-transition: -webkit-transform 800ms ease;
+  transition: -webkit-transform 800ms ease;
+  transition: transform 800ms ease;
+  transition: transform 800ms ease, -webkit-transform 800ms ease;
+}
+
+.heart:hover .heart_vide {
+  opacity: 0;
+}
+
+.heart:hover .heart_plein {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .header p {
   font-family: 'Shrikhand';
   font-size: 32px;
@@ -413,20 +450,21 @@ i {
   font-size: 25px;
   padding-top: 35px;
   padding-left: 30px;
+  margin-right: 70px;
 }
 
 .box__header {
-  width: calc(100% - 40px);
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 80px;
   background-color: white;
-  padding-left: 18%;
+  padding-left: 0%;
 }
 
 .box__location {
-  width: calc(100% - 40px);
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -453,7 +491,7 @@ i {
 }
 
 .box__booking {
-  width: calc(100% - 40px);
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -612,7 +650,6 @@ i {
           align-items: flex-end;
   margin-right: 10px;
   margin-top: 20px;
-  font-size: 20px;
   font-size: 30px;
   color: #a09d9d;
 }
@@ -723,7 +760,6 @@ i {
 
 .menu__blocs__bloc__texte {
   color: #353535;
-  line-height: 25%;
   font-size: 15px;
   padding: 10px 10px 0px 10px;
 }
@@ -733,7 +769,7 @@ i {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 15px;
   font-weight: 700;
   color: #353535;
@@ -755,6 +791,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin: auto;
   padding: 15px 0 0 0;
   border-radius: 30px;
   color: white;

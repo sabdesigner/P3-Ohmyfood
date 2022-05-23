@@ -450,7 +450,6 @@ i {
   font-size: 25px;
   padding-top: 35px;
   padding-left: 30px;
-  margin-right: 70px;
 }
 
 .box__header {
@@ -458,6 +457,8 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   max-height: 80px;
   background-color: white;
   padding-left: 0%;

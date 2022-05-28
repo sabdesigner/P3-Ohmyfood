@@ -57,34 +57,7 @@
     &__text {
       font-size: 18px;
     }
-    &__btn {
-      width: 250px;
-      height: 40px;
-      align-items: center;
-      justify-content: space-around;
-      font-size: 18px;
-      padding: 15px 0 0 0;
-      border-radius: 30px;
-      color: white;
-      box-shadow: 1px 4px 8px $color-mediumgrey;
-      background: $colour-primaire;
-      background: -moz-linear-gradient(
-        top,
-        $colour-secondary 0%,
-        $colour-primaire 100%
-      );
-      background: -webkit-linear-gradient(
-        top,
-        $colour-secondary 0%,
-        $colour-primaire 100%
-      );
-      background: linear-gradient(
-        to bottom,
-        $colour-secondary 0%,
-        $colour-primaire 100%
-      );
-    }
-  }
+}
 }
 .functions {
   padding: 20px;
@@ -97,7 +70,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     :hover {
-      background-color: lighten($color: $colour-primaire, $amount: 35);
+      background-color: lighten($color: $color-primary, $amount: 35);
     }
 
     &__bloc {
@@ -115,7 +88,7 @@
       &__number {
         width: 40px;
         height: 40px;
-        background-color: $colour-primaire;
+        background-color: $color-primary;
         border-radius: 40px;
         text-align: center;
         line-height: 40px;
@@ -128,7 +101,7 @@
         color: $color-mediumgrey;
       }
       .icone-function:hover {
-        color: $colour-primaire;
+        color: $color-primary;
       }
       &__text {
         font-size: large;
@@ -179,7 +152,7 @@
         position: absolute;
         width: 100px;
         height: 30px;
-        background-color: $colour-tertiary;
+        background-color: $color-tertiary;
         border-radius: 5%;
 
         text-align: center;
@@ -191,7 +164,7 @@
         right: 10px;
         font-size: 20px;
         font-weight: 700;
-        color: darken($color: $colour-tertiary, $amount: 40);
+        color: darken($color: $color-tertiary, $amount: 40);
       }
     }
   }
@@ -241,68 +214,37 @@
         font-size: 30px;
         color: $color-stronggrey;
       }
-    &__bloc{
-      position: relative;
-      background-color: $color-white;
-      width: 100%;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-      box-shadow: 1px 4px 8px $color-mediumgrey;
-      justify-content: space-between;
-
-        &__texte{
-          color: $color-stronggrey;
-          font-size: 15px;
-          padding: 10px 10px 0px 10px;
-        }
-        &__prix{
+      &__container-parent{
+        width: 100%;
+        &__bloc{
           position: relative;
-          align-items:flex-end;      
-          margin-right: 20px;
-          margin-top: 30px;
-          font-size: 15px;
-          font-weight: 700;
-          color: $color-stronggrey;
-      }
+          background-color: $color-white;
+          width: 100%;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+          box-shadow: 1px 4px 8px $color-mediumgrey;
+          justify-content: space-between;
+          
+                &__texte{
+                  color: $color-stronggrey;
+                  font-size: 15px;
+                  padding: 10px 10px 0px 10px;
+              }
+                &__prix{
+                  position: relative;
+                  align-items:flex-end;      
+                  margin-right: 20px;
+                  margin-top: 30px;
+                  font-size: 15px;
+                  font-weight: 700;
+                  color: $color-stronggrey;
+              }
+            }
+            //bug de centrage bouton
         }
-      }
-      &__plat{
-        color: $color-stronggrey;
-        border-bottom: 3px solid $colour-tertiary;
-        width: 40px;
-        height: 30px;
-        margin-bottom: 20px;
-      }
-      &__btn {
-        width: 250px;
-        height: 40px;
-        font-size: 18px;
-        align-items: center;
-        text-align: center;
-        margin:auto;
 
-        padding: 15px 0 0 0;
-        border-radius: 30px;
-        color: white;
-        box-shadow: 1px 4px 8px $color-mediumgrey;
-        background: $colour-primaire;
-        background: -moz-linear-gradient(
-          top,
-          $colour-secondary 0%,
-          $colour-primaire 100%
-        );
-        background: -webkit-linear-gradient(
-          top,
-          $colour-secondary 0%,
-          $colour-primaire 100%
-        );
-        background: linear-gradient(
-          to bottom,
-          $colour-secondary 0%,
-          $colour-primaire 100%
-        );
       }
   }

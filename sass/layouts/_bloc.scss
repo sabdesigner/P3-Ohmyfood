@@ -69,9 +69,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    :hover {
-      background-color: lighten($color: $color-primary, $amount: 35);
-    }
 
     &__bloc {
       background-color: $color-softgrey;
@@ -84,6 +81,9 @@
       align-items: center;
       margin-bottom: 20px;
       box-shadow: 1px 4px 8px $color-mediumgrey;
+      &:hover {
+        background-color: lighten($color: $color-primary, $amount: 35);
+      }
 
       &__number {
         width: 40px;

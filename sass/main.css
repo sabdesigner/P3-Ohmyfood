@@ -393,6 +393,14 @@ i {
   font-weight: 700;
 }
 
+.overflow-menu {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
 .heart {
   color: transparent;
   background-clip: text;
@@ -406,8 +414,8 @@ i {
   position: absolute;
   opacity: 1;
   -webkit-text-stroke-width: 3px;
-  -webkit-transition: transparent 20ms ease;
-  transition: transparent 20ms ease;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
 }
 
 .heart_plein {
@@ -416,10 +424,10 @@ i {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(10%, #FF79DA), color-stop(90%, #9356DC));
   background-image: linear-gradient(to bottom, #FF79DA, #FF79DA 10%, #9356DC 90%);
   -webkit-text-stroke-width: 0px;
-  -webkit-transition: -webkit-transform 800ms ease;
-  transition: -webkit-transform 800ms ease;
-  transition: transform 800ms ease;
-  transition: transform 800ms ease, -webkit-transform 800ms ease;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .heart:hover .heart_vide {
@@ -431,9 +439,39 @@ i {
           transform: scale(1);
 }
 
+.heartnot:hover .heart_vide {
+  opacity: 1;
+}
+
 .header p {
   font-family: 'Shrikhand';
   font-size: 32px;
+}
+
+.style-btn {
+  width: 250px;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 0px;
+  color: white;
+  -webkit-box-shadow: 1px 4px 8px #a09d9d;
+          box-shadow: 1px 4px 8px #a09d9d;
+  background: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+}
+
+.style-btn:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
+  -webkit-box-shadow: 1px 4px 8px #353535;
+          box-shadow: 1px 4px 8px #353535;
 }
 
 .box {
@@ -512,25 +550,6 @@ i {
 
 .box__booking__text {
   font-size: 18px;
-}
-
-.box__booking__btn {
-  width: 250px;
-  height: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 18px;
-  padding: 15px 0 0 0;
-  border-radius: 30px;
-  color: white;
-  -webkit-box-shadow: 1px 4px 8px #a09d9d;
-          box-shadow: 1px 4px 8px #a09d9d;
-  background: #9356DC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 
 .functions {
@@ -740,7 +759,11 @@ i {
   color: #353535;
 }
 
-.menu__blocs__bloc {
+.menu__blocs__container-parent {
+  width: 100%;
+}
+
+.menu__blocs__container-parent__bloc {
   position: relative;
   background-color: white;
   width: 100%;
@@ -762,13 +785,13 @@ i {
           justify-content: space-between;
 }
 
-.menu__blocs__bloc__texte {
+.menu__blocs__container-parent__bloc__texte {
   color: #353535;
   font-size: 15px;
   padding: 10px 10px 0px 10px;
 }
 
-.menu__blocs__bloc__prix {
+.menu__blocs__container-parent__bloc__prix {
   position: relative;
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -778,33 +801,6 @@ i {
   font-size: 15px;
   font-weight: 700;
   color: #353535;
-}
-
-.menu__plat {
-  color: #353535;
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.menu__btn {
-  width: 250px;
-  height: 40px;
-  font-size: 18px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin: auto;
-  padding: 15px 0 0 0;
-  border-radius: 30px;
-  color: white;
-  -webkit-box-shadow: 1px 4px 8px #a09d9d;
-          box-shadow: 1px 4px 8px #a09d9d;
-  background: #9356DC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 
 .footer {

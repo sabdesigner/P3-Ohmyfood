@@ -10,18 +10,18 @@
     position: absolute;
     opacity: 1;
     -webkit-text-stroke-width: 3px;
-    transition: transparent 20ms ease;
+    transition: opacity 500ms ease;
   }
   &_plein {
     transform: scale(0);
     background-image: linear-gradient(
       to bottom,
-      $colour-secondary,
-      $colour-secondary 10%,
-      $colour-primaire 90%
+      $color-secondary,
+      $color-secondary 10%,
+      $color-primary 90%
     );
     -webkit-text-stroke-width: 0px;
-    transition: transform 800ms ease;
+    transition: transform 500ms ease;
   }
   &:hover {
     .heart_vide {
@@ -30,5 +30,10 @@
     .heart_plein {
       transform: scale(1);
     }
+  }
+  &not:hover {
+    .heart_vide {
+      opacity: 1;
+    }    
   }
 }

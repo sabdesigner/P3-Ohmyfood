@@ -401,6 +401,69 @@ i {
   overflow: hidden;
 }
 
+.loading {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  opacity: 0.8;
+  -webkit-animation: hideLoader 3500ms 1 forwards;
+          animation: hideLoader 3500ms 1 forwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.loading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*ici votre design de bordure */
+  width: 50px;
+  height: 50px;
+  border: white solid 5px;
+  border-top-color: #99E2D0;
+  border-bottom-color: #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes hideLoader {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes hideLoader {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 .heart {
   color: transparent;
   background-clip: text;

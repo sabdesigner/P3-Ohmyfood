@@ -23,33 +23,34 @@
       );
 
   opacity:0.8;
-  
   animation: hideLoader 3500ms 1 forwards;
   animation-delay: 1500ms;
 }
 
 .loading::after {
-  content: "";
+  content : "";
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  /*ici votre design de bordure */
+
   width: 50px;
   height: 50px;
   border: $color-white solid 5px;
   border-top-color: $color-tertiary;
   border-bottom-color: $color-tertiary;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+
 }
 
-@keyframes hideLoader{
+@keyframes hideLoader {
   100%
   {
     opacity: 0;
     display: none;
+    z-index: -1;
   }
 }
 

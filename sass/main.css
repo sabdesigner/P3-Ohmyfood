@@ -616,9 +616,21 @@ i {
   font-size: 18px;
 }
 
+@media (min-width: 320px) {
+  .box__booking__text {
+    font-size: 15px;
+  }
+}
+
 .functions {
   padding: 20px;
   background-color: white;
+}
+
+@media (min-width: 320px) {
+  .functions {
+    padding: 10px;
+  }
 }
 
 .functions__blocs {
@@ -687,9 +699,21 @@ i {
   font-size: large;
 }
 
+@media (min-width: 320px) {
+  .functions__blocs__bloc__text {
+    font-size: 15px;
+  }
+}
+
 .restaurants {
   padding: 20px;
   background-color: #F2F2F2;
+}
+
+@media (min-width: 320px) {
+  .restaurants {
+    padding: 10px;
+  }
 }
 
 .restaurants__blocs {
@@ -731,6 +755,12 @@ i {
   padding: 0px 10px 0px 10px;
 }
 
+@media (min-width: 320px) {
+  .restaurants__blocs__bloc__texte {
+    width: 70%;
+  }
+}
+
 .restaurants__blocs__bloc .icone-restaurant {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -739,6 +769,12 @@ i {
   margin-top: 20px;
   font-size: 30px;
   color: #a09d9d;
+}
+
+@media (min-width: 320px) {
+  .restaurants__blocs__bloc .icone-restaurant {
+    margin-top: 10px;
+  }
 }
 
 .restaurants__blocs__bloc__new {

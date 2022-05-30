@@ -56,12 +56,19 @@
 
     &__text {
       font-size: 18px;
+          @include respond-to('small') {
+          font-size: 15px;
+          }
     }
 }
 }
 .functions {
   padding: 20px;
   background-color: $color-white;
+  @include respond-to('small') {
+    padding: 10px;
+    }
+
   &__blocs {
     width: calc(100% - 20px);
     padding-left: 20px;
@@ -105,6 +112,9 @@
       }
       &__text {
         font-size: large;
+        @include respond-to('small') {
+          font-size: 15px;
+          }
       }
     }
   }
@@ -112,6 +122,9 @@
 .restaurants {
   padding: 20px;
   background-color: $color-softgrey;
+  @include respond-to('small') {
+    padding: 10px;
+    }
 
   &__blocs {
     width: 100%;
@@ -139,6 +152,9 @@
         width: 74%;
         font-size: 18px;
         padding: 0px 10px 0px 10px;
+        @include respond-to('small') {
+          width: 70%;
+          }
       }
       .icone-restaurant {
         align-items:flex-end;
@@ -146,6 +162,9 @@
         margin-top: 20px;
         font-size: 30px;
         color: $color-mediumgrey;
+        @include respond-to('small') {
+          margin-top: 10px;
+          }
       }
       
       &__new {

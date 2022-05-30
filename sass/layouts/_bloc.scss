@@ -198,6 +198,7 @@
   border-radius: 40px 40px 0 0;
   position: relative;
   padding: 30px 20px;
+  width:100%;
 
 
   &__blocs{
@@ -206,6 +207,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    //animation apparition 
+    animation: apparition 0.8s ease-out;
+    @keyframes apparition {
+          from {
+              opacity: 0;
+              transform: translateY(100px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0px);
+          }
+      }
     
       .icone-menu{
         align-items:flex-end;
@@ -216,6 +230,22 @@
       }
       &__container-parent{
         width: 100%;
+
+           //animation apparition 
+        animation: apparition 0.8s ease-out;
+        @keyframes apparition {
+              from {
+                  opacity: 0;
+                  transform: translateY(100px);
+              }
+              to {
+                  opacity: 1;
+                  transform: translateY(0px);
+              }
+          }
+
+        
+ 
         &__bloc{
           position: relative;
           background-color: $color-white;
@@ -226,8 +256,21 @@
           flex-wrap: wrap;
           margin-bottom: 20px;
           box-shadow: 1px 4px 8px $color-mediumgrey;
-          justify-content: space-between;
-          
+          justify-content: space-between;  
+
+             //animation apparition 
+          animation: apparition 0.8s ease-out;
+          @keyframes apparition {
+                from {
+                    opacity: 0;
+                    transform: translateY(100px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+
                 &__texte{
                   color: $color-stronggrey;
                   font-size: 15px;

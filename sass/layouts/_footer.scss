@@ -3,15 +3,29 @@
     width: 100%;
     background: $color-stronggrey;
     height: 200px;
+    @include respond-to('desktop') { 
+        flex-direction: row;
+        justify-content: space-around;
+        height: 250px;
+     }
+ &__footer-ohmyfood {
+    @include respond-to('desktop') { 
+        text-align-last: center;
+         }
     h4 {
         font-family:'Shrikhand';
         font-size: 20px;
         color: $color-white;
         margin-left: 20px;
+
+    @include respond-to('desktop') { 
+        font-size:30px;
+             }
     }
     p{
         line-height: 50%;
         color: $color-white;
         margin-left: 20px;
     }
+} 
 }

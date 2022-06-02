@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
   background-color: $color-white;
+  
   &__nav {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -52,7 +53,11 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    padding-block-end: 20%;
+    padding-block-end: 10%;
+
+    @include respond-to('desktop') { 
+      padding-block-end: 5%;
+    }
 
     &__text {
       font-size: 18px;
@@ -67,17 +72,34 @@
   background-color: $color-white;
   @include respond-to('small') {
     padding: 10px;
-    }
-
+  }   
+  @include respond-to('medium') { 
+    text-align: center; 
+  }
+  @include respond-to('desktop') { 
+    text-align: center; 
+  }
+  &__titre{
+    width: 100%;
+   }
   &__blocs {
     width: calc(100% - 20px);
     padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    &__bloc {
+  @include respond-to('tablet') { 
+    justify-content: center;
+  }
+  @include respond-to('medium') { 
+    justify-content: space-around;
+  }
+  @include respond-to('desktop') { 
+    justify-content: space-around;
+    
+  }
+  &__bloc {
       background-color: $color-softgrey;
       width: 100%;
       height: 70px;
@@ -91,8 +113,11 @@
       &:hover {
         background-color: lighten($color: $color-primary, $amount: 35);
       }
+      @include respond-to('medium') { 
+        max-width :800px;
+      }
 
-      &__number {
+  &__number {
         width: 40px;
         height: 40px;
         background-color: $color-primary;
@@ -106,15 +131,16 @@
         margin: 0 20px;
         font-size: 20px;
         color: $color-mediumgrey;
+      @include respond-to('small') {
+        margin: 0 5px;
+        }
       }
       .icone-function:hover {
         color: $color-primary;
       }
       &__text {
         font-size: large;
-        @include respond-to('small') {
-          font-size: 15px;
-          }
+        display: flex;
       }
     }
   }
@@ -122,13 +148,24 @@
 .restaurants {
   padding: 20px;
   background-color: $color-softgrey;
+  height: fit-content;
+   &__titre{
+    width: 100%;
+    @include respond-to('desktop') {
+      text-align: center;
+      }
+   }
+
   @include respond-to('small') {
     padding: 10px;
+  }
+  @include respond-to('desktop') {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     }
-
-  &__blocs {
-    width: 100%;
-    background-color: $color-white;
+    &__blocs {
 
     &__bloc {
       position: relative;
@@ -138,7 +175,12 @@
       flex-direction: row;
       flex-wrap: wrap;
       margin-bottom: 20px;
+      background-color: $color-white;
       box-shadow: 1px 4px 8px $color-mediumgrey;
+
+      @include respond-to('desktop') {
+      width:480px;
+        }
 
       &__img {
         height: 180px;
@@ -149,22 +191,22 @@
       &__texte {
         color: $color-stronggrey;
         line-height: 25%;
-        width: 74%;
+        width: 77%;
         font-size: 18px;
-        padding: 0px 10px 0px 10px;
-        @include respond-to('small') {
-          width: 70%;
-          }
+        padding: 0px 0px 0px 10px;
+
+      @include respond-to('small') {
+        width: 70%;
+        margin-right: 8px;
+      }
+
       }
       .icone-restaurant {
-        align-items:flex-end;
-        margin-right: 10px;
+        margin-right: 5px;
+        margin-left:auto;
         margin-top: 20px;
         font-size: 30px;
         color: $color-mediumgrey;
-        @include respond-to('small') {
-          margin-top: 10px;
-          }
       }
       
       &__new {
@@ -188,6 +230,7 @@
     }
   }
 }
+
 
 // Page Menu
 .box-menu {
@@ -217,8 +260,6 @@
   border-radius: 40px 40px 0 0;
   position: relative;
   padding: 30px 20px;
-  width:100%;
-
 
   &__blocs{
     width: 100%;
@@ -227,19 +268,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    //animation apparition 
-    animation: apparition 0.8s ease-out;
-    @keyframes apparition {
-          from {
-              opacity: 0;
-              transform: translateY(100px);
-          }
-          to {
-              opacity: 1;
-              transform: translateY(0px);
-          }
-      }
-    
       .icone-menu{
         align-items:flex-end;
         margin-right: 10px;
@@ -249,22 +277,7 @@
       }
       &__container-parent{
         width: 100%;
-
-           //animation apparition 
-        animation: apparition 0.8s ease-out;
-        @keyframes apparition {
-              from {
-                  opacity: 0;
-                  transform: translateY(100px);
-              }
-              to {
-                  opacity: 1;
-                  transform: translateY(0px);
-              }
-          }
-
-        
- 
+  
         &__bloc{
           position: relative;
           background-color: $color-white;
@@ -277,7 +290,8 @@
           box-shadow: 1px 4px 8px $color-mediumgrey;
           justify-content: space-between;  
 
-             //animation apparition 
+
+//animation apparition 
           animation: apparition 0.8s ease-out;
           @keyframes apparition {
                 from {
@@ -289,7 +303,6 @@
                     transform: translateY(0px);
                 }
             }
-
                 &__texte{
                   color: $color-stronggrey;
                   font-size: 15px;

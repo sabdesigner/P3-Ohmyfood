@@ -254,28 +254,29 @@
   }
 }
 
-
-
 .menu {
   background-color:$color-regulargrey;
   font-size: 14px;
   border-radius: 40px 40px 0 0;
   position: relative;
   padding: 30px 20px;
-   
+
+
+
   .menu-btn{
     width: 100%;
     display: flex;
     justify-content: center;
 
       }
+
   &__blocs{
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    
       .icone-menu{
         align-items:flex-end;
         margin-top: 15px;
@@ -285,8 +286,14 @@
         @include respond-to('small') {
           margin-right: 0px;
         }
+
       }
     }
+&__meat{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
 
 
     .card {
@@ -303,6 +310,9 @@
       flex-wrap: nowrap;
       overflow: hidden;
 
+      @include respond-to('desktop') {
+        width: 100%;
+        }
     }
     
     .col1 {
@@ -371,3 +381,4 @@ animation: apparition 0.8s ease-out;
 }
 }
 
+}

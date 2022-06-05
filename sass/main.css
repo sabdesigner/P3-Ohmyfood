@@ -944,9 +944,6 @@ i {
   border-radius: 40px 40px 0 0;
   position: relative;
   padding: 30px 20px;
-  /*  0% + transition + overflow caché au cas ou */
-  -webkit-animation: apparition 0.8s ease-out;
-          animation: apparition 0.8s ease-out;
 }
 
 .menu .menu-btn {
@@ -990,7 +987,22 @@ i {
   }
 }
 
-.menu .card {
+.menu__meat {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*  0% + transition + overflow caché au cas ou */
+  -webkit-animation: apparition 0.8s ease-out;
+          animation: apparition 0.8s ease-out;
+}
+
+.menu__meat .card {
   width: 100%;
   height: 100px;
   background-color: white;
@@ -1010,13 +1022,19 @@ i {
   overflow: hidden;
 }
 
-.menu .col1 {
+@media (min-width: 1024px) {
+  .menu__meat .card {
+    width: 100%;
+  }
+}
+
+.menu__meat .col1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.menu .texte {
+.menu__meat .texte {
   color: #353535;
   font-size: 15px;
   padding: 0px 0px 0px 10px;
@@ -1026,14 +1044,14 @@ i {
   display: block;
 }
 
-.menu .col2 {
+.menu__meat .col2 {
   /*  min width pour garantir un minimum de taille en mobile */
   min-width: 50px;
   -ms-flex-preferred-size: 20px;
       flex-basis: 20px;
 }
 
-.menu .prix {
+.menu__meat .prix {
   position: relative;
   text-align: end;
   margin-right: 20px;
@@ -1044,7 +1062,7 @@ i {
   margin-bottom: 25px;
 }
 
-.menu .col3 {
+.menu__meat .col3 {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
   min-width: 0px;
@@ -1064,7 +1082,7 @@ i {
   overflow: hidden;
 }
 
-.menu .icon {
+.menu__meat .icon {
   color: white;
   font-size: 30px;
 }

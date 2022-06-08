@@ -8,10 +8,18 @@
         justify-content: space-around;
         height: 250px;
      }
+     @include respond-to('tablet') { 
+        flex-direction: row;
+        justify-content: space-around;
+        height: 250px;
+     }
  &__footer-ohmyfood {
     @include respond-to('desktop') { 
         text-align-last: center;
          }
+    @include respond-to('tablet') { 
+            text-align-last: center;
+             }
     h4 {
         font-family:'Shrikhand';
         font-size: 20px;

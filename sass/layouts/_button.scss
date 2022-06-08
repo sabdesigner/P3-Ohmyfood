@@ -25,6 +25,10 @@
         $color-secondary 0%,
         $color-primary 100%
       );
+      transition-timing-function: ease-in-out;
+      transition-duration: 2s;
+
+
 }
 .style-btn:hover {
   filter: brightness(1.15);

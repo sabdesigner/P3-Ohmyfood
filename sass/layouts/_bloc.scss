@@ -10,10 +10,10 @@
     color: $color-stronggrey;
     font-size: 25px;
     padding-top: 35px;
-    padding-left: 30px;
+    padding-left: 10px;
   }
   &__header {
-    width: 100% ;
+    width: 100%;
     justify-content: center;
     align-content: center;
     max-height: 80px;
@@ -45,64 +45,70 @@
     width: calc(100% - 40px);
     flex-direction: column;
     text-align: center;
-
     align-items: center;
     background-color: $color-softgrey;
     color: $color-stronggrey;
-
-    padding-left: 20px;
-    padding-right: 20px;
-
+    padding-left: 0px;
+    padding-right: 0px;
     padding-block-end: 10%;
 
-    @include respond-to('desktop') { 
+    @include respond-to('tablet') {
       padding-block-end: 5%;
-    }
-
-    &__text {
       font-size: 18px;
-          @include respond-to('small') {
-          font-size: 15px;
-          }
+      }
+    &__text {
+      padding-left: 20px;
+      padding-right: 20px;
     }
 }
 }
 .functions {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  padding-bottom: 20px; 
   background-color: $color-white;
-  @include respond-to('small') {
-    padding: 10px;
-  }   
-  @include respond-to('medium') { 
+
+  @include respond-to('tablet') { 
     text-align: center; 
   }
   @include respond-to('desktop') { 
     text-align: center; 
   }
+
+ .functions__container{ 
+  padding-left: 20px;
+
+  @include respond-to('tablet') { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  @include respond-to('desktop') { 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; 
+  }
+
   &__titre{
     width: 100%;
    }
   &__blocs {
-    width: calc(100% - 20px);
-    padding-left: 20px;
+    width: 100%;
+    padding-left: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-  @include respond-to('tablet') { 
-    justify-content: center;
-  }
-  @include respond-to('medium') { 
-    justify-content: space-around;
-  }
-  @include respond-to('desktop') { 
-    justify-content: space-around;
-    
-  }
+    @include respond-to('tablet') { 
+      max-width: 500px;
+    }
+
   &__bloc {
       background-color: $color-softgrey;
       width: 100%;
       height: 70px;
+
       border-radius: 20px;
       display: flex;
       flex-direction: row;
@@ -110,11 +116,17 @@
       align-items: center;
       margin-bottom: 20px;
       box-shadow: 1px 4px 8px $color-mediumgrey;
-      &:hover {
-        background-color: lighten($color: $color-primary, $amount: 35);
+
+      @include respond-to('desktop') { 
+        margin-right: 8%;
+        margin-left: 8%;
       }
-      @include respond-to('medium') { 
-        max-width :800px;
+   
+      &:hover {
+        background-color: lighten($color: $color-primary, $amount: 35);      
+      }
+      &:hover .icone-function {
+        color: $color-primary;
       }
 
   &__number {
@@ -128,25 +140,27 @@
         color: $color-white;
       }
       .icone-function {
-        margin: 0 20px;
+        margin: 0 10px;
         font-size: 20px;
         color: $color-mediumgrey;
-      @include respond-to('small') {
-        margin: 0 5px;
-        }
-      }
-      .icone-function:hover {
-        color: $color-primary;
       }
       &__text {
-        font-size: large;
-        display: flex;
+        font-size: 15px;
+        @include respond-to('tablet') {
+          font-size: 16px;
+          }
+        @include respond-to('desktop') {
+            font-size: 17px;
+            }
       }
     }
   }
 }
+}
 .restaurants {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
   background-color: $color-softgrey;
   height: fit-content;
    &__titre{
@@ -154,18 +168,21 @@
     @include respond-to('desktop') {
       text-align: center;
       }
+    @include respond-to('tablet') {
+      text-align: center;
+      }
    }
 
-  @include respond-to('small') {
-    padding: 10px;
-  }
   @include respond-to('desktop') {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     }
     &__blocs {
+      @include respond-to('desktop') {
+        margin: 2%;
+        }
 
     &__bloc {
       position: relative;
@@ -179,7 +196,7 @@
       box-shadow: 1px 4px 8px $color-mediumgrey;
 
       @include respond-to('desktop') {
-      width:480px;
+      width:600px;
         }
 
       &__img {
@@ -194,11 +211,6 @@
         width: 77%;
         font-size: 18px;
         padding: 0px 0px 0px 10px;
-
-      @include respond-to('small') {
-        width: 70%;
-        margin-right: 8px;
-      }
 
       }
       .icone-restaurant {
@@ -232,6 +244,7 @@
 }
 
 
+
 // Page Menu
 .box-menu {
   display: flex;
@@ -244,30 +257,28 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    &__img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      min-height: 350px;
-      background-position: top;
+  &__img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    min-height: 350px;
+    background-position: top;
     }
   }
 }
 
 .menu {
   background-color:$color-regulargrey;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 40px 40px 0 0;
   position: relative;
-  padding: 30px 20px;
+  padding: 20px 12px 20px 12px;
 
-
-
+  
   .menu-btn{
     width: 100%;
     display: flex;
     justify-content: center;
-
       }
 
   &__blocs{
@@ -282,37 +293,44 @@
         margin-top: 15px;
         font-size: 30px;
         color: $color-stronggrey;
-
-        @include respond-to('small') {
-          margin-right: 0px;
+        @include respond-to('tablet') { 
+          padding-left: 5%; 
         }
-
+        @include respond-to('desktop') { 
+          padding-left: 15%;  
+        }
       }
-    }
-&__meat{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
+    
+      @include respond-to('tablet') { 
+        justify-content: center; 
+      }
+      @include respond-to('desktop') { 
+        justify-content: center; 
+      }
 
+    }
+
+    .menu__container { 
+      width:fit-content;
 
     .card {
       width: 100%;
+
       height: 100px;
       background-color:$color-white;
       border-radius: 20px;
       box-shadow: 1px 4px 8px $color-mediumgrey;
       margin-bottom: 20px;
 
-    
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       overflow: hidden;
 
-      @include respond-to('desktop') {
-        width: 100%;
-        }
+      @include respond-to('tablet') { 
+        max-width: 600px;
+      }
+
     }
     
     .col1 {
@@ -323,11 +341,9 @@
         font-size: 15px;
         padding: 0px 0px 0px 10px;
 
-        white-space: nowrap;
         overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
-        display: block;
-
     }
     
 .col2 {
@@ -344,7 +360,6 @@ font-size: 15px;
 font-weight: 700;
 color: $color-stronggrey;
 margin-bottom: 25px;
-
 }
     
 /*  0% + transition + overflow caché au cas ou */
@@ -378,7 +393,6 @@ animation: apparition 0.8s ease-out;
                     opacity: 1;
                     transform: translateY(0px);
                 }
-}
-}
-
+    }
+  }
 }

@@ -1,10 +1,6 @@
 $breakpoints: (
-    // de 0 à 320
-    'small':  ( max-width:  320px ),
 
-    'tablet': (max-width: 768px),
-
-    'medium': (min-width: 769px),
+    'tablet': (min-width: 768px),
     
     // de 1024 à +
     'desktop':  ( min-width: 1024px ),

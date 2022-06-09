@@ -11,6 +11,10 @@
     font-size: 25px;
     padding-top: 35px;
     padding-left: 10px;
+
+    @include respond-to('tablet') { 
+      padding-left: 30px; 
+      }
   }
   &__header {
     width: 100%;
@@ -245,6 +249,7 @@
 
 
 
+
 // Page Menu
 .box-menu {
   display: flex;
@@ -274,7 +279,6 @@
   position: relative;
   padding: 20px 12px 20px 12px;
 
-  
   .menu-btn{
     width: 100%;
     display: flex;
@@ -293,11 +297,9 @@
         margin-top: 15px;
         font-size: 30px;
         color: $color-stronggrey;
-        @include respond-to('tablet') { 
-          padding-left: 5%; 
-        }
-        @include respond-to('desktop') { 
-          padding-left: 15%;  
+
+      @include respond-to('tablet') { 
+        padding-left: 5%; 
         }
       }
     
@@ -307,12 +309,23 @@
       @include respond-to('desktop') { 
         justify-content: center; 
       }
-
     }
+  }
 
-    .menu__container { 
-      width:fit-content;
+.menu__container { 
 
+  @include respond-to('desktop') { 
+    display :flex;
+    flex-direction: row;
+  }
+ //Entrees
+  &__entries {
+    flex-basis: 100%;
+    
+    @include respond-to('desktop') { 
+      width: 33%;
+      padding: 2%;
+    }
     .card {
       width: 100%;
 
@@ -324,32 +337,46 @@
 
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
-      overflow: hidden;
 
-      @include respond-to('tablet') { 
-        max-width: 600px;
+
+      &--delay-1 {
+        animation: apparition 0.3s ease-out;
       }
 
+      &--delay-2 {
+        animation: apparition 0.6s ease-out;
+
+      }
+
+      &--delay-3 {
+        animation: apparition 0.8s ease-out;
+
+      }
+
+      &--delay-4 {
+        animation: apparition 1s ease-out;
+
+      }
     }
-    
+
     .col1 {
       flex-grow: 1;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
      .texte{
         color: $color-stronggrey;
         font-size: 15px;
         padding: 0px 0px 0px 10px;
-
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
     
 .col2 {
 /*  min width pour garantir un minimum de taille en mobile */
 min-width: 50px;
 flex-basis: 20px;
+
 }
 .prix{
 position: relative;
@@ -360,8 +387,7 @@ font-size: 15px;
 font-weight: 700;
 color: $color-stronggrey;
 margin-bottom: 25px;
-}
-    
+}   
 /*  0% + transition + overflow caché au cas ou */
 .col3 {
 flex-basis: 0;
@@ -375,16 +401,202 @@ justify-content: center;
 align-items: center;
     
 overflow: hidden;
-}
-    
+}  
 .icon {
       color: white;
       font-size: 30px;
 }
     
-//animation apparition 
-animation: apparition 0.8s ease-out;
-@keyframes apparition {
+  }
+//Plats
+  &__dishes {
+    flex-basis: 100%;
+    @include respond-to('desktop') { 
+      width: 33%;
+      padding: 2%;
+    }
+    .card {
+      width: 100%;
+
+      height: 100px;
+      background-color:$color-white;
+      border-radius: 20px;
+      box-shadow: 1px 4px 8px $color-mediumgrey;
+      margin-bottom: 20px;
+
+      display: flex;
+      flex-direction: row;
+
+
+      @include respond-to('tablet') { 
+        max-width: 600px;
+      }
+
+      &--delay-1 {
+        animation: apparition 0.3s ease-out;
+      }
+
+      &--delay-2 {
+        animation: apparition 0.6s ease-out;
+
+      }
+
+      &--delay-3 {
+        animation: apparition 0.8s ease-out;
+
+      }
+
+      &--delay-4 {
+        animation: apparition 1s ease-out;
+
+      }
+    }
+
+    .col1 {
+      flex-grow: 1;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+     .texte{
+        color: $color-stronggrey;
+        font-size: 15px;
+        padding: 0px 0px 0px 10px;
+
+    }
+    
+.col2 {
+/*  min width pour garantir un minimum de taille en mobile */
+min-width: 50px;
+flex-basis: 20px;
+
+}
+.prix{
+position: relative;
+text-align:end;
+margin-right: 20px;
+margin-top: auto;
+font-size: 15px;
+font-weight: 700;
+color: $color-stronggrey;
+margin-bottom: 25px;
+}   
+/*  0% + transition + overflow caché au cas ou */
+.col3 {
+flex-basis: 0;
+min-width: 0px;
+width: 0;
+background-color: $color-tertiary;
+transition: all 400ms;
+    
+display: flex;
+justify-content: center;
+align-items: center;
+    
+overflow: hidden;
+}  
+.icon {
+      color: white;
+      font-size: 30px;
+}
+    
+  }
+//Desserts   
+  &__dessert {
+    flex-basis: 100%;
+    @include respond-to('desktop') { 
+      width: 33%;
+      padding: 2%;
+    }
+    .card {
+      width: 100%;
+
+      height: 100px;
+      background-color:$color-white;
+      border-radius: 20px;
+      box-shadow: 1px 4px 8px $color-mediumgrey;
+      margin-bottom: 20px;
+
+      display: flex;
+      flex-direction: row;
+
+
+      @include respond-to('tablet') { 
+        max-width: 600px;
+      }
+
+      &--delay-1 {
+        animation: apparition 0.3s ease-out;
+      }
+
+      &--delay-2 {
+        animation: apparition 0.6s ease-out;
+
+      }
+
+      &--delay-3 {
+        animation: apparition 0.8s ease-out;
+
+      }
+
+      &--delay-4 {
+        animation: apparition 1s ease-out;
+
+      }
+    }
+
+    .col1 {
+      flex-grow: 1;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .texte{
+        color: $color-stronggrey;
+        font-size: 15px;
+        padding: 0px 0px 0px 10px;
+
+    }
+    
+  .col2 {
+  /*  min width pour garantir un minimum de taille en mobile */
+  min-width: 50px;
+  flex-basis: 20px;
+
+  }
+  .prix{
+  position: relative;
+  text-align:end;
+  margin-right: 20px;
+  margin-top: auto;
+  font-size: 15px;
+  font-weight: 700;
+  color: $color-stronggrey;
+  margin-bottom: 25px;
+  }   
+  /*  0% + transition + overflow caché au cas ou */
+  .col3 {
+  flex-basis: 0;
+  min-width: 0px;
+  width: 0;
+  background-color: $color-tertiary;
+  transition: all 400ms;
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  overflow: hidden;
+  }  
+  .icon {
+      color: white;
+      font-size: 30px;
+  }
+    
+  } 
+  @keyframes apparition {
                 from {
                     opacity: 0;
                     transform: translateY(100px);
@@ -393,6 +605,6 @@ animation: apparition 0.8s ease-out;
                     opacity: 1;
                     transform: translateY(0px);
                 }
-    }
   }
 }
+

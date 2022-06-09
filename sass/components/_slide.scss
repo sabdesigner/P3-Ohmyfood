@@ -2,6 +2,7 @@
   /*  min width = minimum de taille en mobile */
   min-width: 80px;
   flex-basis: 50px;
+  border-radius: 0px 20px 20px 0px;
   }
   .card:hover .icon {
   animation: TheRotator 400ms ease-in-out;

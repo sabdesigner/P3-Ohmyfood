@@ -28,13 +28,12 @@ i {
   padding-right: 10px;
 }
 
-
-
 //page menu
 .titre-menu{
   h1 {
     color: $color-stronggrey;
     font-family: "Shrikhand";
+
     @include respond-to('desktop') {
       margin-right: 20px;
     }

@@ -412,7 +412,6 @@ overflow: hidden;
   &__dishes {
     flex-basis: 100%;
     @include respond-to('desktop') { 
-      width: 33%;
       padding: 2%;
     }
     .card {
@@ -426,11 +425,6 @@ overflow: hidden;
 
       display: flex;
       flex-direction: row;
-
-
-      @include respond-to('tablet') { 
-        max-width: 600px;
-      }
 
       &--delay-1 {
         animation: apparition 0.3s ease-out;
@@ -506,7 +500,6 @@ overflow: hidden;
   &__dessert {
     flex-basis: 100%;
     @include respond-to('desktop') { 
-      width: 33%;
       padding: 2%;
     }
     .card {
@@ -520,11 +513,6 @@ overflow: hidden;
 
       display: flex;
       flex-direction: row;
-
-
-      @include respond-to('tablet') { 
-        max-width: 600px;
-      }
 
       &--delay-1 {
         animation: apparition 0.3s ease-out;
@@ -607,4 +595,3 @@ overflow: hidden;
                 }
   }
 }
-

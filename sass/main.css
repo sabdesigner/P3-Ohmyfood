@@ -1155,7 +1155,6 @@ i {
 
 @media (min-width: 1099px) {
   .menu__container__dishes {
-    width: 33%;
     padding: 2%;
   }
 }
@@ -1175,12 +1174,6 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-@media (min-width: 768px) {
-  .menu__container__dishes .card {
-    max-width: 600px;
-  }
 }
 
 .menu__container__dishes .card--delay-1 {
@@ -1270,7 +1263,6 @@ i {
 
 @media (min-width: 1099px) {
   .menu__container__dessert {
-    width: 33%;
     padding: 2%;
   }
 }
@@ -1290,12 +1282,6 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-@media (min-width: 768px) {
-  .menu__container__dessert .card {
-    max-width: 600px;
-  }
 }
 
 .menu__container__dessert .card--delay-1 {

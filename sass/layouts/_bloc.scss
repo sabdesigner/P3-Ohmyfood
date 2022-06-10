@@ -121,6 +121,8 @@
       margin-bottom: 20px;
       box-shadow: 1px 4px 8px $color-mediumgrey;
 
+      cursor: pointer;
+
       @include respond-to('desktop') { 
         margin-right: 8%;
         margin-left: 8%;
@@ -277,12 +279,13 @@
   font-size: 12px;
   border-radius: 40px 40px 0 0;
   position: relative;
-  padding: 20px 12px 20px 12px;
+  padding: 20px;
 
   .menu-btn{
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
       }
 
   &__blocs{
@@ -312,279 +315,87 @@
     }
   }
 
-.menu__container { 
-
-  @include respond-to('desktop') { 
-    display :flex;
-    flex-direction: row;
-  }
- //Entrees
-  &__entries {
-    flex-basis: 100%;
-    
-    @include respond-to('desktop') { 
-      width: 33%;
-      padding: 2%;
-    }
-    .card {
-      width: 100%;
-
-      height: 100px;
-      background-color:$color-white;
-      border-radius: 20px;
-      box-shadow: 1px 4px 8px $color-mediumgrey;
-      margin-bottom: 20px;
-
-      display: flex;
-      flex-direction: row;
-
-
-      &--delay-1 {
-        animation: apparition 0.3s ease-out;
-      }
-
-      &--delay-2 {
-        animation: apparition 0.6s ease-out;
-
-      }
-
-      &--delay-3 {
-        animation: apparition 0.8s ease-out;
-
-      }
-
-      &--delay-4 {
-        animation: apparition 1s ease-out;
-
-      }
-    }
-
-    .col1 {
-      flex-grow: 1;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-     .texte{
-        color: $color-stronggrey;
-        font-size: 15px;
-        padding: 0px 0px 0px 10px;
-    }
-    
-.col2 {
-/*  min width pour garantir un minimum de taille en mobile */
-min-width: 50px;
-flex-basis: 20px;
-
-}
-.prix{
-position: relative;
-text-align:end;
-margin-right: 20px;
-margin-top: auto;
-font-size: 15px;
-font-weight: 700;
-color: $color-stronggrey;
-margin-bottom: 25px;
-}   
-/*  0% + transition + overflow caché au cas ou */
-.col3 {
-flex-basis: 0;
-min-width: 0px;
-width: 0;
-background-color: $color-tertiary;
-transition: all 400ms;
-    
+#menu__container { 
 display: flex;
-justify-content: center;
-align-items: center;
-    
-overflow: hidden;
-}  
-.icon {
-      color: white;
-      font-size: 30px;
-}
-    
-  }
-//Plats
-  &__dishes {
-    flex-basis: 100%;
-    @include respond-to('desktop') { 
-      padding: 2%;
-    }
-    .card {
-      width: 100%;
+flex-direction: row; 
+flex-wrap: wrap;
 
-      height: 100px;
-      background-color:$color-white;
-      border-radius: 20px;
-      box-shadow: 1px 4px 8px $color-mediumgrey;
-      margin-bottom: 20px;
-
-      display: flex;
-      flex-direction: row;
-
-      &--delay-1 {
-        animation: apparition 0.3s ease-out;
-      }
-
-      &--delay-2 {
-        animation: apparition 0.6s ease-out;
-
-      }
-
-      &--delay-3 {
-        animation: apparition 0.8s ease-out;
-
-      }
-
-      &--delay-4 {
-        animation: apparition 1s ease-out;
-
-      }
-    }
-
-    .col1 {
-      flex-grow: 1;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-     .texte{
-        color: $color-stronggrey;
-        font-size: 15px;
-        padding: 0px 0px 0px 10px;
-
-    }
-    
-.col2 {
-/*  min width pour garantir un minimum de taille en mobile */
-min-width: 50px;
-flex-basis: 20px;
-
-}
-.prix{
-position: relative;
-text-align:end;
-margin-right: 20px;
-margin-top: auto;
-font-size: 15px;
-font-weight: 700;
-color: $color-stronggrey;
-margin-bottom: 25px;
-}   
-/*  0% + transition + overflow caché au cas ou */
-.col3 {
-flex-basis: 0;
-min-width: 0px;
-width: 0;
-background-color: $color-tertiary;
-transition: all 400ms;
-    
-display: flex;
-justify-content: center;
-align-items: center;
-    
-overflow: hidden;
-}  
-.icon {
-      color: white;
-      font-size: 30px;
-}
-    
-  }
-//Desserts   
-  &__dessert {
-    flex-basis: 100%;
-    @include respond-to('desktop') { 
-      padding: 2%;
-    }
-    .card {
-      width: 100%;
-
-      height: 100px;
-      background-color:$color-white;
-      border-radius: 20px;
-      box-shadow: 1px 4px 8px $color-mediumgrey;
-      margin-bottom: 20px;
-
-      display: flex;
-      flex-direction: row;
-
-      &--delay-1 {
-        animation: apparition 0.3s ease-out;
-      }
-
-      &--delay-2 {
-        animation: apparition 0.6s ease-out;
-
-      }
-
-      &--delay-3 {
-        animation: apparition 0.8s ease-out;
-
-      }
-
-      &--delay-4 {
-        animation: apparition 1s ease-out;
-
-      }
-    }
-
-    .col1 {
-      flex-grow: 1;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-    .texte{
-        color: $color-stronggrey;
-        font-size: 15px;
-        padding: 0px 0px 0px 10px;
-
-    }
-    
-  .col2 {
-  /*  min width pour garantir un minimum de taille en mobile */
-  min-width: 50px;
-  flex-basis: 20px;
-
-  }
-  .prix{
-  position: relative;
-  text-align:end;
-  margin-right: 20px;
-  margin-top: auto;
-  font-size: 15px;
-  font-weight: 700;
-  color: $color-stronggrey;
-  margin-bottom: 25px;
-  }   
-  /*  0% + transition + overflow caché au cas ou */
-  .col3 {
-  flex-basis: 0;
-  min-width: 0px;
-  width: 0;
-  background-color: $color-tertiary;
-  transition: all 400ms;
-    
-  display: flex;
+@include respond-to('tablet') { 
+  flex-direction: row; 
   justify-content: center;
-  align-items: center;
-    
-  overflow: hidden;
-  }  
-  .icon {
-      color: white;
-      font-size: 30px;
+} 
+
+@include respond-to('desktop') { 
+  flex-direction: row; 
+  flex-wrap: nowrap;
+}
+
+}
+
+  .list__dishes  { 
+    width:100%;
+    height: auto;
+
+
+    @include respond-to('tablet') { 
+      width: 744px;
+    }
+
+    @include respond-to('desktop') { 
+      width: calc( 100% - 66%);
+      max-width: 744px;
+    }
+
+    h2{
+      font-weight: 200;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $color-tertiary;
+      width: 50px;
+    }
   }
+
+  .card {
+      width: 100%;
+      height: 90px;
+      border-radius: 20px;
+
+      margin-bottom: 10px;
+
+      box-shadow: 1px 4px 8px $color-mediumgrey;
+      background-color:$color-white;
+        
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow: hidden;
+
+    @include respond-to('desktop') { 
+        width: calc(100% - 10px);
+        margin-right: 10px;
+      }
+
+   &--delay-1 {
+            animation: apparition 0.3s ease-out;
+          }
     
-  } 
-  @keyframes apparition {
+   &--delay-2 {
+            animation: apparition 0.6s ease-out;
+    
+          }
+    
+   &--delay-3 {
+            animation: apparition 0.8s ease-out;
+    
+          }
+    
+  &--delay-4 {
+            animation: apparition 1s ease-out;
+    
+          }
+
+          //animation apparition 
+          animation: apparition 0.8s ease-out;
+          @keyframes apparition {
                 from {
                     opacity: 0;
                     transform: translateY(100px);
@@ -593,5 +404,82 @@ overflow: hidden;
                     opacity: 1;
                     transform: translateY(0px);
                 }
-  }
-}
+    }
+          
+        }
+        
+        .col1 {
+          flex-grow: 1;
+          font-size: 15px;
+          
+          background-color:$color-white;
+        
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          padding-left: 10px;
+          padding-right: 10px;
+          
+        }
+        
+        .col2 {
+          /*  min width pour garantir un minimum de taille en mobile */
+          min-width: 80px;
+          flex-basis: 50px;
+
+          font-size: 15px;
+          font-weight: 700;
+
+          
+
+          background-color:$color-white;
+          color: $color-stronggrey;
+
+          position: relative;
+          text-align:center;
+          align-self: center;
+
+        }
+        
+        /*  0% + transition + overflow caché au cas ou */
+        .col3 {
+          flex-basis: 0;
+          min-width: 0px;
+          width: 0;
+          background-color: $color-tertiary;
+          transition: all 400ms;
+        
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        
+          overflow: hidden;
+        }
+        
+        .icon {
+          color: white;
+          font-size: 30px;
+        }
+        
+        /* HOVER (et contre tous)  */
+        .card:hover .col3 {
+          /*  min width pour garantir un minimum de taille en mobile */
+          min-width: 100px;
+          flex-basis: 300px;
+        }
+        .card:hover .icon {
+          animation: TheRotator 400ms ease-in-out;
+        }
+        
+        /*   */
+        @keyframes TheRotator {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        
+        

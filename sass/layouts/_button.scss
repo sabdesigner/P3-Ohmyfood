@@ -27,11 +27,13 @@
       );
 
 
+      cursor: pointer;
 
 }
 .style-btn:hover {
   transition-timing-function: ease-in-out;
   transition-duration: 400ms;
+
   
   filter: brightness(1.15);
   box-shadow:  1px 4px 8px $color-stronggrey;

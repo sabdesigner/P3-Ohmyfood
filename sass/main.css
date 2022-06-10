@@ -561,6 +561,7 @@ i {
   background: #9356DC;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  cursor: pointer;
 }
 
 .style-btn:hover {
@@ -1300,5 +1301,6 @@ i {
   line-height: 50%;
   color: white;
   margin-left: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

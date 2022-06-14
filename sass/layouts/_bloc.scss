@@ -343,7 +343,7 @@ flex-wrap: wrap;
 
     @include respond-to('desktop') { 
       width: calc( 100% - 66%);
-      max-width: 744px;
+      max-width: 33%;
     }
 
     h2{
